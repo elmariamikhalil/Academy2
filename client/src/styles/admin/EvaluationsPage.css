@@ -1,0 +1,379 @@
+.admin-reports-page {
+  padding: 20px;
+}
+
+.page-header {
+  margin-bottom: 30px;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: var(--text-primary);
+}
+
+.reports-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 30px;
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tab-btn.active {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
+.tab-btn:hover:not(.active) {
+  color: var(--text-primary);
+  background-color: var(--background-light);
+}
+
+.report-content {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Overview Report */
+.overview-report {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.report-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: var(--text-primary);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background-color: var(--background-light);
+  border-radius: 8px;
+  padding: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+}
+
+.stat-card.primary::before {
+  background-color: var(--primary-color);
+}
+
+.stat-card.success::before {
+  background-color: var(--secondary-color);
+}
+
+.stat-card.warning::before {
+  background-color: var(--accent-color);
+}
+
+.stat-card.danger::before {
+  background-color: var(--danger-color);
+}
+
+.stat-title {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 5px;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 5px;
+}
+
+.stat-subtitle {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.recent-users,
+.popular-courses {
+  margin-bottom: 30px;
+}
+
+.recent-users h3,
+.popular-courses h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+  padding: 10px 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.data-table th {
+  background-color: var(--background-light);
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.data-table tbody tr:hover {
+  background-color: var(--background-light);
+}
+
+/* Enrollments Report */
+.report-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.report-header h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: var(--text-primary);
+}
+
+.report-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-group label {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.filter-group select {
+  padding: 8px 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  min-width: 150px;
+}
+
+.report-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.report-summary .stat-card {
+  flex: 1;
+  min-width: 200px;
+}
+
+.chart-container {
+  margin-bottom: 30px;
+}
+
+.chart-container h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.chart-placeholder {
+  background-color: var(--background-light);
+  border-radius: 8px;
+  padding: 20px;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Simple chart representation for placeholder */
+.chart-data {
+  display: flex;
+  align-items: flex-end;
+  height: 200px;
+  gap: 5px;
+  width: 100%;
+}
+
+.chart-bar {
+  flex: 1;
+  background-color: var(--primary-color);
+  min-height: 1px;
+  position: relative;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.bar-tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+
+.chart-bar:hover .bar-tooltip {
+  opacity: 1;
+}
+
+.chart-axis {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.axis-label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.top-courses h3,
+.completion-by-course h3,
+.criteria-averages h3,
+.user-evaluations h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.template-info {
+  background-color: var(--background-light);
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.template-info h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: var(--text-primary);
+}
+
+.template-info p {
+  margin: 0 0 10px;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.no-data {
+  padding: 50px 20px;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.select-prompt {
+  padding: 50px 20px;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+@media (max-width: 768px) {
+  .reports-tabs {
+    flex-wrap: wrap;
+  }
+
+  .tab-btn {
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+  }
+
+  .report-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .report-actions {
+    width: 100%;
+  }
+
+  .filter-group {
+    flex: 1;
+  }
+
+  .filter-group select {
+    width: 100%;
+  }
+
+  .data-table {
+    display: block;
+    overflow-x: auto;
+  }
+}

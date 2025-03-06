@@ -1,0 +1,348 @@
+.admin-users-page {
+  padding: 20px;
+}
+
+.page-header {
+  margin-bottom: 30px;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: var(--text-primary);
+}
+
+.filters-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  background-color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.search-container {
+  position: relative;
+  flex: 1;
+  max-width: 400px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 15px 10px 40px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-group label {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.filter-group select {
+  padding: 10px 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  min-width: 150px;
+}
+
+.users-table-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.users-table th,
+.users-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.users-table th {
+  background-color: var(--background-light);
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.users-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.users-table tbody tr:hover {
+  background-color: var(--background-light);
+}
+
+.username-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+}
+
+.user-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-placeholder {
+  background-color: var(--primary-color);
+}
+
+.role-select {
+  padding: 5px 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: white;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.no-data {
+  text-align: center;
+  padding: 20px;
+  color: var(--text-secondary);
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal.large {
+  max-width: 700px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: var(--text-primary);
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 5px;
+}
+
+.modal-body {
+  padding: 20px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.modal-footer {
+  padding: 15px 20px;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* User Details Modal Styles */
+.user-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.user-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-avatar.large {
+  width: 80px;
+  height: 80px;
+  font-size: 2rem;
+}
+
+.user-name h3 {
+  margin: 0 0 5px;
+  font-size: 1.3rem;
+  color: var(--text-primary);
+}
+
+.username {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.user-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 15px;
+  background-color: var(--background-light);
+  border-radius: 8px;
+}
+
+.info-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.info-group label {
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.info-group p {
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.user-enrollments {
+  padding-top: 10px;
+}
+
+.user-enrollments h4 {
+  margin: 0 0 15px;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.enrollments-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.enrollment-item {
+  padding: 15px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.enrollment-item:last-child {
+  border-bottom: none;
+}
+
+.enrollment-info h5 {
+  margin: 0 0 5px;
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.enrollment-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.enrollment-meta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.badge {
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.badge.completed {
+  background-color: #e8f5e9;
+  color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+  .filters-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .search-container {
+    max-width: 100%;
+  }
+
+  .users-table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .modal {
+    width: 95%;
+  }
+
+  .user-info {
+    grid-template-columns: 1fr;
+  }
+}

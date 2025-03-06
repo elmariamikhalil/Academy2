@@ -1,0 +1,270 @@
+.course-detail-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.course-header {
+  position: relative;
+  background-color: var(--background-dark);
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+}
+
+.course-header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
+  display: flex;
+  align-items: center;
+}
+
+.course-header-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  color: white;
+}
+
+.course-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.course-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.meta-item i {
+  font-size: 1.2rem;
+}
+
+.course-content-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.course-description-container {
+  flex: 1;
+  min-width: 300px;
+}
+
+.course-description-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+.course-description {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.course-description p {
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.instructor-info {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.instructor-info h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: var(--text-primary);
+}
+
+.instructor-details {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.instructor-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--background-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+}
+
+.instructor-avatar i {
+  font-size: 24px;
+}
+
+.instructor-bio h4 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: var(--text-primary);
+}
+
+.instructor-bio p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.course-curriculum {
+  flex: 2;
+  min-width: 300px;
+}
+
+.course-curriculum h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+.curriculum-sections {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.curriculum-section {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.curriculum-section:last-child {
+  border-bottom: none;
+}
+
+.section-header {
+  padding: 15px 20px;
+  background-color: var(--background-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.section-header:hover {
+  background-color: var(--background);
+}
+
+.section-title {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.section-title h3 {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.content-count {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.toggle-icon {
+  color: var(--text-secondary);
+}
+
+.section-content {
+  background-color: white;
+}
+
+.content-item {
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.content-item:last-child {
+  border-bottom: none;
+}
+
+.content-icon {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.content-title {
+  flex: 1;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.content-type {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-transform: capitalize;
+  padding: 3px 8px;
+  background-color: var(--background-light);
+  border-radius: 4px;
+}
+
+.content-duration {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  min-width: 45px;
+  text-align: right;
+}
+
+.enrollment-prompt {
+  text-align: center;
+  padding: 30px;
+  background-color: var(--background-light);
+  border-top: 1px solid var(--border-color);
+}
+
+.no-content {
+  padding: 30px;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .course-header {
+    height: auto;
+    min-height: 300px;
+  }
+
+  .course-title {
+    font-size: 2rem;
+  }
+
+  .course-content-container {
+    flex-direction: column;
+  }
+
+  .course-description-container,
+  .course-curriculum {
+    width: 100%;
+  }
+}
