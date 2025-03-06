@@ -1,0 +1,18 @@
+/* Inherit styles from LoginPage.css */
+@import "./LoginPage.css";
+
+.form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+@media (max-width: 576px) {
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
